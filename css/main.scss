@@ -1,0 +1,58 @@
+@import "./scssVars";
+
+body{
+	background-image: $backImgFallingStars;
+	background-size: $coverSize;
+    background-repeat: no-repeat;
+    background-position: left top;
+    height: $hundredperCent;
+    min-height: $hundredperCent;
+    margin: $zero;
+    padding: $zero;
+}
+
+
+
+
+.pressStart{
+    font-family: $pressStartFont;
+	//color:#fff;
+	/*degradado texto*/
+	background: -webkit-linear-gradient(left top, #052a85, #79e7ff, #ECF7F9);
+  	background: linear-gradient(to bottom right, #052a85, #79e7ff, #ECF7F9);
+    -webkit-background-clip: text;  
+    -webkit-text-fill-color: transparent;
+	font-weight: bold;
+	/*parpadeo*/
+	animation-name: parpadeo;
+    animation-duration: 0.75s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+  -webkit-animation-name: parpadeo;
+  -webkit-animation-duration: 0.75s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+
+  &:hover{
+    color:red;
+    }
+}
+
+@-moz-keyframes parpadeo{  
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes parpadeo {  
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+@keyframes parpadeo {  
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
